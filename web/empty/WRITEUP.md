@@ -1,4 +1,4 @@
-# Empty Writeup
+# Writeup Empty
 
 When opening the provided URL (https://empty.tghack.no), we're provided with a page that simply states the following:
 

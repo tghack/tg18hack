@@ -1,4 +1,4 @@
-# Writeup [Super Awesome Web Project](README.md)
+# Writeup Super Awesome Web Project
 
 This task give you a link to [this](http://api.superawesome.tghack.no/api-docs) API documentation, 
 with the following message:

@@ -1,4 +1,4 @@
-# Writeup [editor](web/image-proxy)
+# Writeup Editor
 If you add an image in the editor and open the inspect window in your
 browser you can see that the URL to the image has changed to `/proxy/HEX_STRING`.
 If you decode the hex string you can see that this is the URL to the image you added.

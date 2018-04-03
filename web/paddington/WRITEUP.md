@@ -1,4 +1,4 @@
-# Writeup [paddington](web/paddington)
+# Writeup Paddington
 
 We can start by opening the pcap in wireshark. The important packets are those marked as HTTP.
 In the HTTP packet we find this header.

@@ -1,4 +1,4 @@
-# Writeup [Advanced login](web/advanced-login)
+# Writeup Advanced login
 
 If you inspect the headers the http server returns you can see that the web app uses the javascript framework Express.
 In the script.js file we can see that the form on the website posts the content as json. Lets assume the server uses mongodb.
