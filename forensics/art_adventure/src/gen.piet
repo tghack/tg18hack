@@ -1,0 +1,33 @@
+ # track for function __init
+0
+0
+0
+0
+0
+1
+_track_0:
+dup
+bz.0f
+.btbl _track_0 _track_1 
+0:
+halt
+
+
+.track
+ # track for function main
+.btbl __entry_0
+halt
+__entry_0:
+@"CnZhcj0nR1QxOHtDVlJHIFZGIFNIQSF9JwpwcmludCB2YXIK\n"
+@"Good number!"
+1
+ # (assign to __retval
+4
+3
+roll
+pop
+3
+1
+roll
+ # ) 
+b._track_0
