@@ -1,0 +1,14 @@
+.flex-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+.flex{
+    width: 100px;
+    padding-top: 10px;
+    display: inline-block;
+}
+.txtinput{
+    width: 100px;
+    display: inline-block;
+}

@@ -1,0 +1,3 @@
+Disallow: /gammelt
+Disallow: /system
+Disallow: /HelloTheGathering

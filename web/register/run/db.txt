@@ -1,0 +1,13 @@
+root/UiOCTF**
+create database Gathering;
+
+username
+email
+password
+date
+
+use Gathering;
+
+create table web2_users (id INT(11) AUTO_INCREMENT, username VARCHAR(50) NOT NULL, email VARCHAR(50) NOT NULL, password VARCHAR(50) NOT NULL, date DATE NOT NULL, PRIMARY KEY (id));
+
+insert into web2_users (username, password, email, date) VALUES ("admin", "9cdfb439c7876e703e307864c9167a15", "admin@tghack.no", "2019-01-28 13:13:00");

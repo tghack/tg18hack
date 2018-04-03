@@ -1,0 +1,22 @@
+server {
+	listen 80;
+	server_name happy.tghack.no;
+
+	root /var/www/happy;
+	index index.php;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+	}
+
+	location ~ /\.ht {
+		deny all;
+	}
+}

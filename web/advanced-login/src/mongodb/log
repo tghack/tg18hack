@@ -1,0 +1,454 @@
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] MongoDB starting : pid=26726 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T15:49:34.965+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T15:49:34.982+0100 I STORAGE  [initandlisten] 
+2017-12-14T15:49:34.982+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T15:49:34.982+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T15:49:34.982+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] 
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] 
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] 
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T15:49:35.793+0100 I CONTROL  [initandlisten] 
+2017-12-14T15:49:36.009+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T15:49:36.374+0100 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-12-14T15:49:36.374+0100 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-14T15:49:36.376+0100 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-12-14T15:49:36.377+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-12-14T15:49:36.377+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T15:49:53.711+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:46518 conn1: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T15:49:53.953+0100 I COMMAND  [conn1] command tghack-mongo.users command: create { create: "users" } numYields:0 reslen:37 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } } } protocol:op_query 231ms
+2017-12-14T15:54:59.533+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-14T15:54:59.533+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-14T15:54:59.533+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-14T15:54:59.533+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-14T15:54:59.533+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-14T15:54:59.533+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-14T15:54:59.533+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-14T15:54:59.536+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-14T15:54:59.823+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-14T15:54:59.823+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-14T15:54:59.823+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-14T16:02:11.085+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] MongoDB starting : pid=27197 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:02:11.088+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:02:11.105+0100 I STORAGE  [initandlisten] 
+2017-12-14T16:02:11.105+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T16:02:11.105+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T16:02:11.105+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T16:02:12.095+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:02:12.319+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T16:02:12.710+0100 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-12-14T16:02:12.710+0100 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-14T16:02:12.712+0100 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-12-14T16:02:12.713+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-12-14T16:02:12.713+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T16:02:15.397+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:52484 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:04:43.877+0100 I NETWORK  [conn2] received client metadata from 127.0.0.1:53638 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:11:33.916+0100 I COMMAND  [conn2] command admin.system.users appName: "MongoDB Shell" command: insert { insert: "system.users", documents: [ { _id: "admin.foo", user: "foo", db: "admin", credentials: { SCRAM-SHA-1: { iterationCount: 10000, salt: "AHky71ISCbH73r6XJx+Y2w==", storedKey: "EgBDD3FtaR9PriKjGSI0VHau8XQ=", serverKey: "cfh122aa8KRyRjbQHqTUxSkNE+g=" } }, roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 278ms
+2017-12-14T16:11:33.916+0100 I COMMAND  [conn2] command admin.system.version appName: "MongoDB Shell" command: createUser { createUser: "foo", pwd: "xxx", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_command 313ms
+2017-12-14T16:16:45.712+0100 I NETWORK  [conn3] received client metadata from 127.0.0.1:59286 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:25:17.068+0100 I NETWORK  [conn4] received client metadata from 127.0.0.1:35074 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:28:11.209+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:36442 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:29:18.253+0100 I NETWORK  [conn6] received client metadata from 127.0.0.1:36964 conn6: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:29:18.488+0100 I COMMAND  [conn6] command admin.system.roles appName: "MongoDB Shell" command: insert { insert: "system.roles", documents: [ { _id: "admin.tghack", role: "tghack", db: "admin", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { W: 4 } }, Collection: { acquireCount: { w: 3 } } } protocol:op_query 191ms
+2017-12-14T16:29:18.488+0100 I COMMAND  [conn6] command admin.$cmd appName: "MongoDB Shell" command: createRole { createRole: "tghack", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [], writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { W: 4 } }, Collection: { acquireCount: { w: 3 } } } protocol:op_command 191ms
+2017-12-14T16:29:28.693+0100 E STORAGE  [thread2] WiredTiger error (2) [1513265368:693348][27197:0x7f3aa3ab1700], log-server: data/journal: directory-list: opendir: No such file or directory
+2017-12-14T16:29:28.693+0100 E STORAGE  [thread2] WiredTiger error (2) [1513265368:693468][27197:0x7f3aa3ab1700], log-server: log pre-alloc server error: No such file or directory
+2017-12-14T16:29:28.693+0100 E STORAGE  [thread2] WiredTiger error (2) [1513265368:693510][27197:0x7f3aa3ab1700], log-server: log server error: No such file or directory
+2017-12-14T16:29:28.693+0100 E STORAGE  [thread2] WiredTiger error (-31804) [1513265368:693593][27197:0x7f3aa3ab1700], log-server: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2017-12-14T16:29:28.693+0100 I -        [thread2] Fatal Assertion 28558 at src/mongo/db/storage/wiredtiger/wiredtiger_util.cpp 361
+2017-12-14T16:29:28.693+0100 I -        [thread2] 
+
+***aborting after fassert() failure
+
+
+2017-12-14T16:29:28.700+0100 F -        [thread2] Got signal: 6 (Aborted).
+
+ 0x55b1af2d257a 0x55b1af2d183e 0x55b1af2d1d12 0x7f3aaa34ada0 0x7f3aa9fb5860 0x7f3aa9fb6ec9 0x55b1ae52d3ac 0x55b1aefd697e 0x7f3aad8da3e2 0x7f3aad8da5f7 0x7f3aad8da870 0x7f3aad935f23 0x7f3aaa34008a 0x7f3aaa07742f
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"55B1ADE3D000","o":"149557A","s":"_ZN5mongo15printStackTraceERSo"},{"b":"55B1ADE3D000","o":"149483E"},{"b":"55B1ADE3D000","o":"1494D12"},{"b":"7F3AAA339000","o":"11DA0"},{"b":"7F3AA9F81000","o":"34860","s":"gsignal"},{"b":"7F3AA9F81000","o":"35EC9","s":"abort"},{"b":"55B1ADE3D000","o":"6F03AC","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"55B1ADE3D000","o":"119997E"},{"b":"7F3AAD8BD000","o":"1D3E2","s":"__wt_eventv"},{"b":"7F3AAD8BD000","o":"1D5F7","s":"__wt_err"},{"b":"7F3AAD8BD000","o":"1D870","s":"__wt_panic"},{"b":"7F3AAD8BD000","o":"78F23"},{"b":"7F3AAA339000","o":"708A"},{"b":"7F3AA9F81000","o":"F642F","s":"clone"}],"processInfo":{ "mongodbVersion" : "3.4.9", "gitVersion" : "876ebee8c7dd0e2d992f36a848ff4dc50ee6603e", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "4.14.4-1-ARCH", "version" : "#1 SMP PREEMPT Tue Dec 5 19:10:06 UTC 2017", "machine" : "x86_64" }, "somap" : [ { "b" : "55B1ADE3D000", "elfType" : 3, "buildId" : "9DB499712A99F8885813E90C758C0A37141D7C3B" }, { "b" : "7FFDF89B1000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "541768FA49AABEEBEC570F57291F271418A4D256" }, { "b" : "7F3AAD8BD000", "path" : "/usr/lib/libwiredtiger-2.9.3.so", "elfType" : 3, "buildId" : "E76821608B2A1D6A2B2D51F5DCBE2F4F7A9580A2" }, { "b" : "7F3AAD6B5000", "path" : "/usr/lib/libsnappy.so.1", "elfType" : 3, "buildId" : "4945D214906C5C184B044DF00ED23A3A4DC08166" }, { "b" : "7F3AAD49E000", "path" : "/usr/lib/libz.so.1", "elfType" : 3, "buildId" : "9D65B31D958D72054843331A9D549B1D12ADA045" }, { "b" : "7F3AAD221000", "path" : "/usr/lib/libyaml-cpp.so.0.5", "elfType" : 3, "buildId" : "4CA43F102CA009469006E0FA5A595D110E72A88A" }, { "b" : "7F3AACF9D000", "path" : "/usr/lib/libboost_program_options.so.1.65.1", "elfType" : 3, "buildId" : "2B921A9D647A1E87936F1A7014406D6A3A718622" }, { "b" : "7F3AACD82000", "path" : "/usr/lib/libboost_filesystem.so.1.65.1", "elfType" : 3, "buildId" : "BD95FB9607B23BC8B637C7A761A38EE2D13AF602" }, { "b" : "7F3AACB5C000", "path" : "/usr/lib/libboost_thread.so.1.65.1", "elfType" : 3, "buildId" : "A8B44F9A7AA6168C03D6A953B53B041EC17A58A1" }, { "b" : "7F3AAC957000", "path" : "/usr/lib/libboost_system.so.1.65.1", "elfType" : 3, "buildId" : "0F29DE4157E1F9D53F56C39F5D8EF086F211F9AA" }, { "b" : "7F3AAC739000", "path" : "/usr/lib/libboost_iostreams.so.1.65.1", "elfType" : 3, "buildId" : "7EE9CE8559DB28E76B16BE5CC13F9C35361D7D98" }, { "b" : "7F3AAC534000", "path" : "/usr/lib/libboost_chrono.so.1.65.1", "elfType" : 3, "buildId" : "27099655DF941215C55EE4CFDF2DFC2139CF3669" }, { "b" : "7F3AAC228000", "path" : "/usr/lib/libboost_regex.so.1.65.1", "elfType" : 3, "buildId" : "D0E02EEAD12B49F1CE7D5877D331069BDAA115D5" }, { "b" : "7F3AABFCD000", "path" : "/usr/lib/libstemmer.so.0", "elfType" : 3, "buildId" : "AD50FFCB248B0279A46FA04967455B1EFD942AF0" }, { "b" : "7F3AABDB0000", "path" : "/usr/lib/libsasl2.so.3", "elfType" : 3, "buildId" : "FD2BC2C7EB41B83A66FF6D099037532027A47916" }, { "b" : "7F3AABB3D000", "path" : "/usr/lib/libpcre.so.1", "elfType" : 3, "buildId" : "00A48F31C879241B1621FA0EE8A77E24333D006B" }, { "b" : "7F3AAB934000", "path" : "/usr/lib/libpcrecpp.so.0", "elfType" : 3, "buildId" : "A97FFE1C498EB6B2E383ABADF091EAF02D7FCA18" }, { "b" : "7F3AAB6CA000", "path" : "/usr/lib/libssl.so.1.1", "elfType" : 3, "buildId" : "8B3582F677DE36D14D30BECE4A92F1CD19026299" }, { "b" : "7F3AAB24D000", "path" : "/usr/lib/libcrypto.so.1.1", "elfType" : 3, "buildId" : "05A9A6C52AACA0043A1D4A046193015D972AC092" }, { "b" : "7F3AAB045000", "path" : "/usr/lib/librt.so.1", "elfType" : 3, "buildId" : "E359DCE254CA0B3BD8B775CA3C5C1017EEAB939D" }, { "b" : "7F3AAAE41000", "path" : "/usr/lib/libdl.so.2", "elfType" : 3, "buildId" : "CA79416A666E7C33772021DC31131E25FE6B4BDF" }, { "b" : "7F3AAAABA000", "path" : "/usr/lib/libstdc++.so.6", "elfType" : 3, "buildId" : "938F98A9DE3D7E83B0FAB2CA3DA7FA1111B3067C" }, { "b" : "7F3AAA76E000", "path" : "/usr/lib/libm.so.6", "elfType" : 3, "buildId" : "2BF8F5F9566A23ACD4913D1AA922CAEE8751CE92" }, { "b" : "7F3AAA557000", "path" : "/usr/lib/libgcc_s.so.1", "elfType" : 3, "buildId" : "EE2DADE9B6DEF85E8BD1DDF934E5148B6BB68140" }, { "b" : "7F3AAA339000", "path" : "/usr/lib/libpthread.so.0", "elfType" : 3, "buildId" : "1E42BC146DEC50CDDBDEDBDAA970A3C486250260" }, { "b" : "7F3AA9F81000", "path" : "/usr/lib/libc.so.6", "elfType" : 3, "buildId" : "458FD9997A454786F071CFE2BEB234542C1E871F" }, { "b" : "7F3AA9B8C000", "path" : "/usr/lib/libtcmalloc.so.4", "elfType" : 3, "buildId" : "475D699EF3D447B31EBBC2ED5B7EEE7702C85447" }, { "b" : "7F3AA9977000", "path" : "/usr/lib/liblz4.so.1", "elfType" : 3, "buildId" : "A274C0E4DBC85A4C859DDFFE638FBB9AE9A156AC" }, { "b" : "7F3AA9767000", "path" : "/usr/lib/libbz2.so.1.0", "elfType" : 3, "buildId" : "40CCD5579988D326C29E410CF102E2AEAD16B627" }, { "b" : "7F3AA9541000", "path" : "/usr/lib/liblzma.so.5", "elfType" : 3, "buildId" : "4DB19F8606DF12AD9D303F94FA74F5A6B154ACB0" }, { "b" : "7F3AA79AC000", "path" : "/usr/lib/libicudata.so.60", "elfType" : 3, "buildId" : "B529E4D4DCDA94A98A0646F03A8EEF3B9B1968C4" }, { "b" : "7F3AA7509000", "path" : "/usr/lib/libicui18n.so.60", "elfType" : 3, "buildId" : "6EF263DF1E8C7C00B762DB61142DC5470FFBB801" }, { "b" : "7F3AA7150000", "path" : "/usr/lib/libicuuc.so.60", "elfType" : 3, "buildId" : "E86EC21FD6784ACF0E79362E455552E1BC1CDAE1" }, { "b" : "7F3AA6F39000", "path" : "/usr/lib/libresolv.so.2", "elfType" : 3, "buildId" : "AF4FA988F3D03A05039F410125C5CF32FF4AB11A" }, { "b" : "7F3AADC08000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "4A1913584F4DD903E5777984186B07640189CB30" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x3A) [0x55b1af2d257a]
+ mongod(+0x149483E) [0x55b1af2d183e]
+ mongod(+0x1494D12) [0x55b1af2d1d12]
+ libpthread.so.0(+0x11DA0) [0x7f3aaa34ada0]
+ libc.so.6(gsignal+0x110) [0x7f3aa9fb5860]
+ libc.so.6(abort+0x1C9) [0x7f3aa9fb6ec9]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x55b1ae52d3ac]
+ mongod(+0x119997E) [0x55b1aefd697e]
+ libwiredtiger-2.9.3.so(__wt_eventv+0x36D) [0x7f3aad8da3e2]
+ libwiredtiger-2.9.3.so(__wt_err+0xA3) [0x7f3aad8da5f7]
+ libwiredtiger-2.9.3.so(__wt_panic+0x25) [0x7f3aad8da870]
+ libwiredtiger-2.9.3.so(+0x78F23) [0x7f3aad935f23]
+ libpthread.so.0(+0x708A) [0x7f3aaa34008a]
+ libc.so.6(clone+0x3F) [0x7f3aaa07742f]
+-----  END BACKTRACE  -----
+2017-12-14T16:29:34.915+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] MongoDB starting : pid=28108 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:29:34.917+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:29:34.931+0100 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory data not found., terminating
+2017-12-14T16:29:34.931+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-14T16:29:34.931+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-14T16:29:34.931+0100 I CONTROL  [initandlisten] now exiting
+2017-12-14T16:29:34.931+0100 I CONTROL  [initandlisten] shutting down with code:100
+2017-12-14T16:29:43.188+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] MongoDB starting : pid=28113 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:29:43.191+0100 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory data not found., terminating
+2017-12-14T16:29:43.191+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-14T16:29:43.191+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] now exiting
+2017-12-14T16:29:43.191+0100 I CONTROL  [initandlisten] shutting down with code:100
+2017-12-14T16:29:47.777+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] MongoDB starting : pid=28117 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:29:47.780+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:29:47.795+0100 I STORAGE  [initandlisten] 
+2017-12-14T16:29:47.795+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T16:29:47.795+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T16:29:47.795+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T16:29:48.570+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:29:48.788+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T16:29:49.185+0100 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-12-14T16:29:49.185+0100 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-14T16:29:49.187+0100 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-12-14T16:29:49.187+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-12-14T16:29:49.188+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T16:30:07.228+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:37350 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:30:07.464+0100 I COMMAND  [conn1] command admin.system.users appName: "MongoDB Shell" command: insert { insert: "system.users", documents: [ { _id: "admin.admin", user: "admin", db: "admin", credentials: { SCRAM-SHA-1: { iterationCount: 10000, salt: "bJlTHO/DCvZzsq0CTj/+2w==", storedKey: "z5X/s5Q0MRWowJpJwn8EWsgvaJc=", serverKey: "o+7p8Wnn6f443ZKVrBU3EDgfjg0=" } }, roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 226ms
+2017-12-14T16:30:07.465+0100 I COMMAND  [conn1] command admin.system.version appName: "MongoDB Shell" command: createUser { createUser: "admin", pwd: "xxx", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_command 234ms
+2017-12-14T16:30:07.710+0100 I COMMAND  [conn1] command admin.system.roles appName: "MongoDB Shell" command: insert { insert: "system.roles", documents: [ { _id: "admin.tghack", role: "tghack", db: "admin", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 240ms
+2017-12-14T16:30:07.710+0100 I COMMAND  [conn1] command admin.system.version appName: "MongoDB Shell" command: createRole { createRole: "tghack", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [], writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_command 240ms
+2017-12-14T16:30:51.163+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-14T16:30:51.163+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-14T16:30:51.163+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-14T16:30:51.163+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-14T16:30:51.163+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-14T16:30:51.163+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-14T16:30:51.163+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-14T16:30:51.168+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-14T16:30:51.382+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-14T16:30:51.382+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-14T16:30:51.382+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-14T16:31:11.166+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] MongoDB starting : pid=28195 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:31:11.169+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, security: { authorization: "enabled" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:31:11.187+0100 I -        [initandlisten] Detected data files in data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-14T16:31:11.187+0100 I STORAGE  [initandlisten] 
+2017-12-14T16:31:11.187+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T16:31:11.187+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T16:31:11.188+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T16:31:12.067+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:31:12.067+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T16:31:12.067+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T16:31:12.067+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:31:12.074+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T16:31:12.075+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T16:31:23.111+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:37948 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:31:23.112+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-14T16:31:23.126+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-14T16:32:10.699+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:11.230+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:33.748+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:35.158+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:36.953+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:37.398+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:42.507+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:42.754+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:42.919+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:32:43.103+0100 I ACCESS   [conn1] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:34:33.801+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-14T16:34:33.801+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-14T16:34:33.801+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-14T16:34:33.801+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-14T16:34:33.801+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-14T16:34:33.801+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-14T16:34:33.801+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-14T16:34:33.807+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-14T16:34:34.182+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-14T16:34:34.182+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-14T16:34:34.182+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-14T16:39:05.724+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] MongoDB starting : pid=28434 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:39:05.727+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, security: { authorization: "enabled" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:39:05.745+0100 I -        [initandlisten] Detected data files in data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-14T16:39:05.745+0100 I STORAGE  [initandlisten] 
+2017-12-14T16:39:05.745+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T16:39:05.745+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T16:39:05.745+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T16:39:06.527+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:39:06.527+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T16:39:06.527+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T16:39:06.527+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:39:06.532+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T16:39:06.533+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T16:39:11.527+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:41636 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:39:11.529+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-14T16:39:11.529+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-14T16:48:32.899+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:48:33.342+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:48:33.738+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:50:46.784+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-14T16:50:46.784+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-14T16:50:46.784+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-14T16:50:46.784+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-14T16:50:46.784+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-14T16:50:46.784+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-14T16:50:46.784+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-14T16:50:46.789+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-14T16:50:47.098+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-14T16:50:47.099+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-14T16:50:47.099+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-14T16:56:02.143+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] MongoDB starting : pid=29058 port=27017 dbpath=data 64-bit host=neon.purser.it
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] modules: none
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] build environment:
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-14T16:56:02.146+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, security: { authorization: "enabled" }, setParameter: { enableLocalhostAuthBypass: "0" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-14T16:56:02.161+0100 I -        [initandlisten] Detected data files in data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-14T16:56:02.161+0100 I STORAGE  [initandlisten] 
+2017-12-14T16:56:02.161+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-14T16:56:02.161+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-14T16:56:02.161+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15555M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-14T16:56:02.935+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:56:02.935+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-14T16:56:02.935+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-14T16:56:02.935+0100 I CONTROL  [initandlisten] 
+2017-12-14T16:56:02.942+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-14T16:56:02.943+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-14T16:56:10.126+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:49670 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:56:10.127+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-14T16:56:10.128+0100 I ACCESS   [conn1] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-14T16:57:53.478+0100 I NETWORK  [conn2] received client metadata from 127.0.0.1:50500 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T16:57:53.479+0100 I ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-14T16:57:53.480+0100 I ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-14T16:58:04.137+0100 I ACCESS   [conn2] Unauthorized: not authorized on testdb to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T16:58:25.961+0100 I ACCESS   [conn2] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T17:01:16.419+0100 I NETWORK  [conn3] received client metadata from 127.0.0.1:52138 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T17:01:16.420+0100 I ACCESS   [conn3] SCRAM-SHA-1 authentication failed for tghack on test from client 127.0.0.1:52138 ; UserNotFound: Could not find user tghack@test
+2017-12-14T17:01:57.230+0100 I NETWORK  [conn4] received client metadata from 127.0.0.1:52460 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-14T17:01:57.240+0100 I ACCESS   [conn4] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings" }
+2017-12-14T17:01:57.241+0100 I ACCESS   [conn4] Unauthorized: not authorized on admin to execute command { replSetGetStatus: 1.0, forShell: 1.0 }
+2017-12-14T17:02:12.660+0100 I ACCESS   [conn4] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: 1.0, filter: {} }
+2017-12-14T17:05:47.238+0100 I NETWORK  [conn5] received client metadata from 127.0.0.1:54254 conn5: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T17:05:47.255+0100 I ACCESS   [conn5] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: true, filter: { name: "users" }, cursor: {} }
+2017-12-14T17:06:17.982+0100 I NETWORK  [conn6] received client metadata from 127.0.0.1:54496 conn6: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T17:06:17.999+0100 I ACCESS   [conn6] Unauthorized: not authorized on tghack-mongo to execute command { listCollections: true, filter: { name: "users" }, cursor: {} }
+2017-12-14T17:09:13.385+0100 I NETWORK  [conn7] received client metadata from 127.0.0.1:55884 conn7: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T17:12:40.886+0100 I NETWORK  [conn8] received client metadata from 127.0.0.1:57524 conn8: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T17:13:27.417+0100 I NETWORK  [conn9] received client metadata from 127.0.0.1:57886 conn9: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T17:14:26.882+0100 I NETWORK  [conn10] received client metadata from 127.0.0.1:58392 conn10: { driver: { name: "nodejs", version: "3.0.0-rc0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.14.4-1-ARCH" }, platform: "Node.js v9.3.0, LE, mongodb-core: 3.0.0-rc0" }
+2017-12-14T23:11:06.961+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-14T23:11:06.961+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-14T23:11:06.961+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-14T23:11:06.961+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-14T23:11:06.961+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-14T23:11:06.961+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-14T23:11:06.961+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-14T23:11:06.964+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-14T23:11:07.316+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-14T23:11:07.316+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-14T23:11:07.316+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-15T22:20:47.247+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] MongoDB starting : pid=13906 port=27017 dbpath=data 64-bit host=zinc.purser.it
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] modules: none
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] build environment:
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-15T22:20:47.338+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-15T22:20:47.379+0100 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory data not found., terminating
+2017-12-15T22:20:47.379+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-15T22:20:47.379+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-15T22:20:47.379+0100 I CONTROL  [initandlisten] now exiting
+2017-12-15T22:20:47.379+0100 I CONTROL  [initandlisten] shutting down with code:100
+2017-12-15T22:21:03.482+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] MongoDB starting : pid=13913 port=27017 dbpath=data 64-bit host=zinc.purser.it
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] modules: none
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] build environment:
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-15T22:21:03.485+0100 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory data not found., terminating
+2017-12-15T22:21:03.485+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-15T22:21:03.485+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] now exiting
+2017-12-15T22:21:03.485+0100 I CONTROL  [initandlisten] shutting down with code:100
+2017-12-15T22:21:16.109+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] MongoDB starting : pid=13919 port=27017 dbpath=data 64-bit host=zinc.purser.it
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] modules: none
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] build environment:
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-15T22:21:16.112+0100 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory data not found., terminating
+2017-12-15T22:21:16.112+0100 I NETWORK  [initandlisten] shutdown: going to close listening sockets...
+2017-12-15T22:21:16.112+0100 I NETWORK  [initandlisten] shutdown: going to flush diaglog...
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] now exiting
+2017-12-15T22:21:16.112+0100 I CONTROL  [initandlisten] shutting down with code:100
+2017-12-15T22:21:52.046+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-15T22:21:52.049+0100 I CONTROL  [initandlisten] MongoDB starting : pid=13934 port=27017 dbpath=data 64-bit host=zinc.purser.it
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] modules: none
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] build environment:
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-15T22:21:52.050+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-15T22:21:52.067+0100 I STORAGE  [initandlisten] 
+2017-12-15T22:21:52.067+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-15T22:21:52.067+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-15T22:21:52.067+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7470M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-15T22:21:53.041+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:21:53.368+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-15T22:21:53.812+0100 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-12-15T22:21:53.812+0100 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-12-15T22:21:53.813+0100 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-12-15T22:21:53.813+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-12-15T22:21:53.813+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-15T22:22:06.950+0100 I NETWORK  [conn1] received client metadata from 127.0.0.1:42664 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "3.4.9" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2017-12-15T22:22:07.315+0100 I COMMAND  [conn1] command admin.system.users appName: "MongoDB Shell" command: insert { insert: "system.users", documents: [ { _id: "admin.admin", user: "admin", db: "admin", credentials: { SCRAM-SHA-1: { iterationCount: 10000, salt: "ntdTTqOpE4r7UnqDpyS2Wg==", storedKey: "7Crw3zrtq1Kv2FWANPh9sdN2suo=", serverKey: "3HY+OvJlMCAOM03VgYcbQu5a3rI=" } }, roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 260ms
+2017-12-15T22:22:07.315+0100 I COMMAND  [conn1] command admin.system.version appName: "MongoDB Shell" command: createUser { createUser: "admin", pwd: "xxx", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ], digestPassword: false, writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_command 299ms
+2017-12-15T22:22:07.566+0100 I COMMAND  [conn1] command admin.system.roles appName: "MongoDB Shell" command: insert { insert: "system.roles", documents: [ { _id: "admin.tghack", role: "tghack", db: "admin", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [] } ] } ninserted:1 keysInserted:1 numYields:0 reslen:44 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_query 247ms
+2017-12-15T22:22:07.566+0100 I COMMAND  [conn1] command admin.system.version appName: "MongoDB Shell" command: createRole { createRole: "tghack", privileges: [ { resource: { db: "tghack-mongo", collection: "users" }, actions: [ "find" ] } ], roles: [], writeConcern: { w: "majority", wtimeout: 600000.0 } } numYields:0 reslen:22 locks:{ Global: { acquireCount: { r: 6, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_command 248ms
+2017-12-15T22:22:12.069+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-15T22:22:12.069+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-15T22:22:12.069+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-15T22:22:12.069+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-15T22:22:12.069+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-15T22:22:12.069+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-15T22:22:12.069+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-15T22:22:12.073+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-15T22:22:12.895+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-15T22:22:12.895+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-15T22:22:12.895+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-15T22:22:24.385+0100 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] MongoDB starting : pid=13972 port=27017 dbpath=data 64-bit host=zinc.purser.it
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] db version v3.4.9
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] git version: 876ebee8c7dd0e2d992f36a848ff4dc50ee6603e
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.0g  2 Nov 2017
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] modules: none
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] build environment:
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-12-15T22:22:24.388+0100 I CONTROL  [initandlisten] options: { config: "mongodb.conf", net: { bindIp: "127.0.0.1" }, security: { authorization: "enabled" }, setParameter: { enableLocalhostAuthBypass: "0" }, storage: { dbPath: "data" }, systemLog: { destination: "file", logAppend: true, path: "log", quiet: true } }
+2017-12-15T22:22:24.406+0100 I -        [initandlisten] Detected data files in data created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-12-15T22:22:24.406+0100 I STORAGE  [initandlisten] 
+2017-12-15T22:22:24.406+0100 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2017-12-15T22:22:24.406+0100 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2017-12-15T22:22:24.406+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7470M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-12-15T22:22:25.326+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:22:25.326+0100 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-12-15T22:22:25.326+0100 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-12-15T22:22:25.326+0100 I CONTROL  [initandlisten] 
+2017-12-15T22:22:25.331+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-12-15T22:22:25.331+0100 I NETWORK  [thread1] waiting for connections on port 27017
+2017-12-15T22:28:05.111+0100 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2017-12-15T22:28:05.112+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-12-15T22:28:05.112+0100 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-12-15T22:28:05.112+0100 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-12-15T22:28:05.112+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2017-12-15T22:28:05.112+0100 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-12-15T22:28:05.112+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-12-15T22:28:05.116+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-12-15T22:28:05.577+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-12-15T22:28:05.578+0100 I CONTROL  [signalProcessingThread] now exiting
+2017-12-15T22:28:05.578+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-12-15T22:28:05.578+0100 I CONTROL  [initandlisten] shutting down with code:0

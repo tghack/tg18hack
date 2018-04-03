@@ -1,0 +1,27 @@
+#editor{
+    z-index:1;
+}
+#modals{
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    padding-top:200px;
+    z-index:2;
+    display:none;
+}
+#modal{
+    position:relative;
+    width:600px;
+    height: 100px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #ababab;
+    text-align:center;
+}
+.url-input{
+    display:inline-block;
+    padding-top:15px;
+}
+
