@@ -1,0 +1,1 @@
+flag = "TG18{t0_be_or_n0t_to_b3_r4ndom}"
