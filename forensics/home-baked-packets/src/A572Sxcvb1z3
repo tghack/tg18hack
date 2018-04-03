@@ -1,0 +1,23 @@
+# S3cret Packet crafting recipe:
+
+Start by gathering the RAW ingredients and mix them together with space:
+    * "can"
+    * "i"
+    * "haz"
+    * "flagz"
+    * "now"
+    * "plz"
+
+Now start preparing your TCP layer:
+1. Start with a dash of reserved bit
+2. Next add some URGENT SYN flags
+3. Finally add a splash of dport 1337
+
+And now prepare the IP layer:
+1. Mark with dst 167.99.35.80
+
+Wrap the TCP layer around the raw mix.
+Wrap the TCP layer in IP layer
+
+Finally, send the packet in owen and hope for the best.
+(The outcome might be different than you expect!)
