@@ -1,5 +1,5 @@
 # Hey, Listen!
-**Points: 75**
+**Points: 124**
 
 **Author: PewZ**
 
