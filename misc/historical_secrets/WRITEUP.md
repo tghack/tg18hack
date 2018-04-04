@@ -55,7 +55,10 @@ Date:   Sun Jan 14 18:12:30 2018 +0100
     Initial comit
 ```
 
-Here we can see the different changes made to the files, or *commits* as theyr're called in git speak. Each of these items contains a "diff" (difference), also called "patch", that git uses to get from one version of the files to another version.
+Here we can see the different changes made to the files, or *commits* as
+they're called in git speak. Each of these items contains a "diff"
+(difference), also called "patch", that git uses to get from one version of the
+files to another version.
 
 We can ask `git` to see a diff from a commit by giving the commit id:
 
