@@ -1,0 +1,15 @@
+ld [4]                  /* offsetof(struct seccomp_data, arch) */
+jne #0xc000003e, bad    /* AUDIT_ARCH_X86_64 */
+ld [0]                  /* offsetof(struct seccomp_data, nr) */
+jeq #0, good            /* read */
+jeq #1, good            /* write */
+jeq #3, good		/* close */
+jeq #9, good            /* mmap */
+jeq #11, good		/* munmap */
+jeq #28, good		/* madvise */
+jeq #35, good           /* nanosleep */
+jeq #41, good		/* socket */
+jeq #42, good		/* connect */
+jeq #60, good           /* exit */
+bad: ret #0             /* SECCOMP_RET_KILL */
+good: ret #0x7fff0000   /* SECCOMP_RET_ALLOW */
