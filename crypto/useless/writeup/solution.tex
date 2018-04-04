@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{minted}
+
+\usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}
+\usepackage{csquotes}
+\addbibresource{ref.bib}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proof}{Proof}
+
+\title{Uselessness As A Service Writeup}
+
+\begin{document}
+\maketitle
+
+\section{Crapserver}
+The server allows us to do two things:
+
+\begin{enumerate}
+	\item View the current state of the LCG
+	\item Encrypt the flag + next state of LCG
+\end{enumerate}
+If we can figure out the initial state of the LCG, it will allow us to compute the whole sequence, which in turn can be used to find the value added to flag everytime it's encrypted. Let's dive into LCGs first!
+
+\section{Linear Congruential Generator}
+Linear congruential generators (LCGs) are often used to generate a sequence of pseudorandom numbers. LCGs are defined as following
+\begin{equation}
+	s_{n + 1} = ((s_{n} \times a) + b) \mod m,
+\end{equation}
+where $s_{n}$ is the current state and $s_{n + 1}$ is the next state. This can be seen in the supplied code:
+
+\begin{minted}{python}
+def next(self):
+	self.s = ((self.a * self.s) + self.b) % self.m
+	return self.s
+\end{minted}
+$m$ is set to 325010924826975202081527196997. The initial state, $a$, and $b$ are initialized to random, 80-bit integers. To recover the whole LCG sequence, we need to find $a$, $b$, and the initial state $s_{init}$.
+
+\begin{equation}
+s_{1} \equiv a \times s_{0} + b \mod m
+\end{equation}
+
+\begin{equation}
+s_{2} \equiv a \times s_{1} + b \mod m
+\end{equation}
+
+\begin{equation}
+s_{3} \equiv a \times s_{2} + b \mod m
+\end{equation}
+We start by finding $a$.
+
+Subtract equation 1 from 2 and 3:
+\begin{equation}
+s_{2} - s_{1} \equiv a \times (s_{1} - s_{0}) \mod m
+\end{equation}
+
+\begin{equation}
+	s_{3} - s_{1} \equiv a \times (s_{2} - s_{0}) \mod m
+\end{equation}
+
+\begin{equation}
+	a =
+		\begin{cases}
+			(s_{2} - s_{1}) \times \text{modinv}((s_{1} - s_{0}), m) \quad \text{if gcd}((s_{1} - s_{0}), m) = 1 \\
+			(s_{3} - s_{1}) \times \text{modinv}((s_{2} - s_{0}), m) \quad \text{if gcd}((s_{2} - s_{0}), m) = 1 \\
+		\end{cases}
+\end{equation}
+
+Then we can obtain $b$:
+
+\begin{equation}
+	b = s_{1} - (s_{0} \times a) \mod m
+\end{equation}
+
+And the initial state, $s_{init}$:
+\begin{equation}
+	s_{init} = ((s_{0} - b) \mod m) \times \text{modinv}(a, m) \mod m
+\end{equation}
+
+\section{Franklin-Reiter Related Message Attack}
+After recovering the sequence produced by the LCG, we can query the server to compute:
+
+\begin{equation}
+\begin{aligned}
+	C_{1} \equiv (f + s_{4})^{e} & \mod n \quad \text{and,} \\
+	C_{2} \equiv (f + s_{5})^{e} & \mod n,
+\end{aligned}
+\end{equation}
+where $f$ is the flag, $s_{4}$ is the fifth state ($s_{0}$ is the first state we got from the server), and $s_{5}$ is the sixth state.
+
+From \cite{boneh1999twenty} we have the following lemma and proof:
+
+\begin{lemma}
+Set $e = 3$ and let $\langle N, e\rangle$ be an RSA public key. Let $M_{1} \neq M_{2} \in \mathbb{Z}^{*}_{N}$ satisfy $M_{1} = f(M_{2}) \mod N$ for some linear polynomial $f = ax + b \in \mathbb{Z}_{N}[x]$ with $b \neq 0$. Then, given $\langle N, e, C_{1}, C_{2}, f\rangle$, Marvin can recover $M_{1}, M_{2}$ in time quadratic in $log N$.
+\end{lemma}
+
+\begin{proof}
+Since $C_{1} = M^{e}_{1} \mod N$, we know that $M_{2}$ is a root of the polynomial $g_{1}(x) = f(x)^{e} - C_{1} \in \mathbb{Z}_{N}[x]$. Similarily, $M_{2}$ is a root of $g_{2}(x) = x^{e} - C_{2} \in \mathbb{Z}_{N}[x]$. The linear factor $x - M_{2}$ divides both polynomials. Therefore, Marvin may use the Euclidean algorithm to compute the gcd of $g_{1}$ and $g_{2}$. If the gcd turns out to be linear, $M_{2}$ is found.
+\end{proof}
+
+We solve it almost the same way, except that we recover $M_{1}$ instead of $M_{2}$. To simplify things a bit, we first find the largest ciphertext, depending on whether $s_{5}$ or $s_{4}$ is the largest, and set this to $C_{2}$. Then we compute their difference $\Delta = s_{C_{2}} - s_{C_{1}}$, where $s_{C_{n}}$ is the LCG state for ciphertext $n$. Let
+\begin{equation}
+\begin{aligned}
+	g_{1} = & x^{3} - C_{1} \quad \text{and,} \\
+	g_{2} = & (x + \Delta)^{3} - C_{2}
+\end{aligned}
+\end{equation}
+We have to compute the gcd of these two polynomials, leaving us with a polynomial on the form $x - m$. $-m$ is coefficient 0, which means that the only thing left to recover $M_{1}$ is to negate $m$. To recover the flag, we do
+\begin{equation}
+	f = (-m) - s_{C_{1}}
+\end{equation}
+
+Following is an implementation in sage:
+\begin{minted}{python}
+# https://crypto.stackexchange.com/questions/30884/
+# help-understanding-basic-franklin-reiter-related-message-attack
+def my_gcd(a, b):
+	return a.monic() if b == 0 else my_gcd(b, a % b)
+
+R.<X> = Zmod(n)[]
+g1 = X^3 - c1
+g2 = (X + diff)^3 - c2
+
+tmp = int(- my_gcd(g1, g2).coefficients()[0])
+flag = tmp - flag_off
+print "flag: {}".format(binascii.unhexlify(hex(flag)))
+\end{minted}
+where \texttt{flag\_off} is either $s_{4}$ or $s_{5}$.
+
+\printbibliography
+
+\end{document}
