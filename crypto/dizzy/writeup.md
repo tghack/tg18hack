@@ -1,6 +1,6 @@
 # Writeup Dizzy
 
-This is a rotational cipher. By trial and error you will find that it's rot17.
+This is a rotational cipher. By trial and error you will find that you may solve the task by using rot9.
 
 The flag is:
 ```
