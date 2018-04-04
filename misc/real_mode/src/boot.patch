@@ -1,0 +1,37 @@
+diff --git a/src/boot.c b/src/boot.c
+index ff705fd..d62f0a6 100644
+--- a/src/boot.c
++++ b/src/boot.c
+@@ -719,6 +719,8 @@ boot_fail(void)
+     reset();
+ }
+ 
++static const char flag[] = "TG18{16_bit_asm_warrior}";
++
+ // Determine next boot method and attempt a boot using it.
+ static void
+ do_boot(int seq_nr)
+@@ -729,6 +731,10 @@ do_boot(int seq_nr)
+     if (seq_nr >= BEVCount)
+         boot_fail();
+ 
++    // copy flag
++    char *ptr = (char *)0x8000;
++    memcpy(ptr, flag, sizeof(flag));
++
+     // Boot the given BEV type.
+     struct bev_s *ie = &BEV[seq_nr];
+     switch (ie->type) {
+diff --git a/src/bootsplash.c b/src/bootsplash.c
+index 165c98d..2b0497c 100644
+--- a/src/bootsplash.c
++++ b/src/bootsplash.c
+@@ -50,6 +50,8 @@ enable_vga_console(void)
+     // Write to screen.
+     printf("SeaBIOS (version %s)\n", VERSION);
+     display_uuid();
++
++    printf("The flag is at 0x%x, can you read it?\n", 0x8000);
+ }
+ 
+ static int
