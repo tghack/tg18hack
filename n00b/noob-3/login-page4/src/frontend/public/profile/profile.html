@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>TGHack: Web Security module 3.4</title>
+    <script type="text/javascript" src="/profile/profile.js"></script>
+    <link rel="stylesheet" href="/profile/profile.css">
+</head>
+
+<body onLoad="onProfileLoad()" class="profile-page">
+    <h1 class="topbar">HackBook</h1>
+
+    <div class="form">
+        <div class="profile-info">
+            <h2>My Hackers Profile</h2>
+            <div class="info-values">
+                <p>Username:</p>
+                <p>Operating System:</p>
+                <p>Text Editor:</p>
+            </div>
+            <div class="info-text">
+                <p><span id="username"></span></p>
+                <p><span id="info_os"></span></p>
+                <p><span id="info_editor"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <h2>Update profile</h2>
+        <input type="text" id="operating-system" placeholder="Operating system"></input>
+        <br>
+        <input type="text" id="text-editor" placeholder="Text editor"></input>
+        <br>
+        <input type="button" value="Update" onclick="updateProfile()" />
+        <br>
+    </div>
+
+    <div class="form">
+        <span id="msg" class="message"></span>
+        <input type="button" value="Log out" onclick="logout()" />
+    </div>
+</body>
+
+</html>

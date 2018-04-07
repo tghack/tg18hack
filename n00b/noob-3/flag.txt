@@ -1,0 +1,4 @@
+1. TG18{AhYeah!__ b4by's first SQL injection!}
+2. TG18{it is SO important to secure your backend code!}
+3. TG18{sometimes, you can find others' pages by changing an ID or some personal value in the URL}
+4. TG18{Keep_your_sessi0ns_for_yourself}
