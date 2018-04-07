@@ -1,0 +1,4 @@
+1. TG18{pages_that_can_be_bruteforced_are_not_so_secret}
+2. TG18{c0ns0le_l0gging_information_1s_n0t_s0_smart_isit?}
+3. TG18{r3m3mb3r_k1ds_d0nt_put_valu4bl3_1nf0rm4t10n_1n_th3_he4ders_w1th0ut_pr0tect10n}
+4. TG18{any0ne_using_this_token_can_pretend_to_be_y0u_0n_this_website}
