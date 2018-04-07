@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.topbar {
+	font-family: "Roboto", sans-serif;
+	color: white;
+	font-size: 60;
+	text-align: center;
+    overflow: hidden;
+}
+
+.flag_image {
+	width: 40%;
+	display: block;
+	margin: auto;
+}
+
+body {
+  background-image: url('tghack.png');
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
